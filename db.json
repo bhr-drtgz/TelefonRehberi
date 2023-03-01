@@ -1,66 +1,58 @@
 {
-    "phones": [
-        {
-            "id": "1",
-            "name": "Bahri",
-            "surname": "Dörtgöz",
-            "email": "123@abc@gmail",
-            "phoneNumber": "5556667788",
-            "categoryId": "1"
-        },
-        {
-            "id": "2",
-            "name": "Ahmet",
-            "surname": "Kara",
-            "email": "123@abc@gmail",
-            "phoneNumber": "5556667788",
-            "categoryId": "2"
-        },
-        {
-            "id": "3",
-            "name": "Tunç",
-            "surname": "Yılmaz",
-            "email": "123@abc@gmail",
-            "phoneNumber": "5556667788",
-            "categoryId": "3"
-        },
-        {
-            "id": "4",
-            "name": "Burhan",
-            "surname": "toprak",
-            "email": "123@abc@gmail",
-            "phoneNumber": "5556667788",
-            "categoryId": "4"
-        },
-        {
-            "id": "5",
-            "name": "Fatih",
-            "surname": "Solak",
-            "email": "123@abc@gmail",
-            "phoneNumber": "5556667788",
-            "categoryId": "5"
-        }
-    ],
-    "categories": [
-        {
-            "id": "1",
-            "name": "Kendi Numaram"
-        },
-        {
-            "id": "2",
-            "name": "Ailem"
-        },
-        {
-            "id": "3",
-            "name": "Okul Arkadaşlarım"
-        },
-        {
-            "id": "4",
-            "name": "İş Arkadaşlarım"
-        },
-        {
-            "id": "5",
-            "name": "Asker Arkadaşlarım"
-        }
-    ]
+  "phones": [
+    {
+      "id": "1",
+      "name": "Bahri",
+      "surname": "Dörtgöz",
+      "email": "123@abc@gmail",
+      "phoneNumber": "5556667788",
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Ahmet",
+      "surname": "Kara",
+      "email": "123@abc@gmail",
+      "phoneNumber": "5556667788",
+      "categoryId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Tunç",
+      "surname": "Yılmaz",
+      "email": "123@abc@gmail",
+      "phoneNumber": "5556667788",
+      "categoryId": "3"
+    },
+    {
+      "id": "5",
+      "name": "Fatih",
+      "surname": "Solggggak",
+      "email": "123@abc@gmail",
+      "phoneNumber": "5556667788",
+      "categoryId": "5"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Kendi Numaram"
+    },
+    {
+      "id": "2",
+      "name": "Ailem"
+    },
+    {
+      "id": "3",
+      "name": "Okul Arkadaşlarım"
+    },
+    {
+      "id": "4",
+      "name": "İş Arkadaşlarım"
+    },
+    {
+      "id": "5",
+      "name": "Asker Arkadaşlarım"
+    }
+  ]
 }

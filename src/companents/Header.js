@@ -9,7 +9,7 @@ const Header = () => {
             <div className='headerRow'>
                 <div className='headerTitle'>
                      <div>
-                        <i class="fa-solid fa-phone-flip"></i>
+                        <i className="fa-solid fa-phone-flip"></i>
                     </div>
                     <div>
                         <Link to={"/"}>TELEFON REHBERİ</Link>
@@ -18,7 +18,7 @@ const Header = () => {
                 <div className='headerIcon'>
                      <div>
                         <Link to={"/add-Phone"}>
-                            <i class="fa-solid fa-user-plus"></i>
+                            <i className="fa-solid fa-user-plus"></i>
                         </Link>
                     </div>
                 </div>

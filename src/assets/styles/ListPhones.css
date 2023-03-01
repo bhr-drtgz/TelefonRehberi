@@ -25,7 +25,11 @@ table {
 
 table td {
     padding-top: 15px;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
+}
+
+table th {
+    border-bottom: 3px solid black;
 }
 
 .tableIcon {
