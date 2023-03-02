@@ -10,6 +10,7 @@ import urls from "./api/urls";
 import AddPhones from "./pages/AddPhones";
 import EditPhone from "./companents/EditPhone";
 import DetailPhone from "./pages/DetailPhone";
+import AddCategory from './pages/AddCategory';
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
         <Route path="/info-detail/:phoneId" element={<DetailPhone />} />
         <Route path="/add-phone" element={<AddPhones />} />
         <Route path="/edit-phone/:phoneId" element={<EditPhone />} />
+        <Route path="/add-category" element={<AddCategory />} />
       </Routes>
     </BrowserRouter>
   );

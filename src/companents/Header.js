@@ -8,7 +8,7 @@ const Header = () => {
         <div className='headerContainer'>
             <div className='headerRow'>
                 <div className='headerTitle'>
-                     <div>
+                      <div>
                         <i className="fa-solid fa-phone-flip"></i>
                     </div>
                     <div>
@@ -16,6 +16,11 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='headerIcon'>
+                    <di>
+                        <Link to={"/add-category"}>
+                        <i class="fa-regular fa-folder-open"></i>
+                        </Link>
+                    </di>
                      <div>
                         <Link to={"/add-Phone"}>
                             <i className="fa-solid fa-user-plus"></i>
