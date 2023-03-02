@@ -67,7 +67,7 @@ const ListPhones = () => {
                                                     setShowDeleteModal(true);
                                                     setWillDeletePhone(phone.id)
                                                 }}><i className="fa-solid fa-trash"></i></Link>
-                                                <Link to={"/edit-phone"}><i className="fa-solid fa-user-pen"></i></Link>
+                                                <Link to={`/edit-phone/${phone.id}`}><i className="fa-solid fa-user-pen"></i></Link>
                                                 <Link to={`/info-detail/${phone.id}`}><i className="fa-solid fa-circle-info"></i></Link>
                                             </div>
                                         </td>

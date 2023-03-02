@@ -7,8 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import actionTypes from "./redux/actions/actionTypes";
 import api from "./api/api";
 import urls from "./api/urls";
-import PhoneDetail from "./pages/PhoneDetail";
 import AddPhones from "./pages/AddPhones";
+import EditPhone from "./companents/EditPhone";
+import DetailPhone from "./pages/DetailPhone";
 
 function App() {
 
@@ -55,8 +56,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/info-phone/:phoneId" element={<PhoneDetail />} />
+        <Route path="/info-detail/:phoneId" element={<DetailPhone />} />
         <Route path="/add-phone" element={<AddPhones />} />
+        <Route path="/edit-phone/:phoneId" element={<EditPhone />} />
       </Routes>
     </BrowserRouter>
   );
