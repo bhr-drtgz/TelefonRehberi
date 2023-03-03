@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Bahri",
       "surname": "Dörtgöz",
-      "email": "123@abc@gmail",
+      "email": "123@gmail",
       "phoneNumber": "5556667788",
       "categoryId": "1"
     },
@@ -27,8 +27,8 @@
     {
       "id": "5",
       "name": "Fatih",
-      "surname": "Solggggak",
-      "email": "123@abc@gmail",
+      "surname": "Solak",
+      "email": "123abc@gmail",
       "phoneNumber": "5556667788",
       "categoryId": "5"
     },
@@ -39,6 +39,14 @@
       "phoneNumber": "5550004455",
       "email": "123456@gmail.com",
       "categoryId": "4"
+    },
+    {
+      "id": "1677860924257",
+      "name": "Adnan",
+      "surname": "Oktar",
+      "phoneNumber": "5559992345",
+      "email": "123@gmail.com",
+      "categoryId": "5"
     }
   ],
   "categories": [

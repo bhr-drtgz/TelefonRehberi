@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
 }
 
 .listWrap {
@@ -47,3 +48,25 @@ table th {
 .tableIcon i:hover {
     color: blue;
 }
+
+.searchInput {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.serachWrap{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    }
+
+.searchInput input {
+    width: 700px;
+    height: 30px;
+    padding: 25px 25px;
+    border: none;
+    background-color: rgb(54, 245, 11);
+    border-radius: 5px;
+ }

@@ -32,8 +32,14 @@ const ListPhones = () => {
                 });
             });
     };
-     return (
+    return (
         <div className='listConteiner'>
+            <div className='searchWrap'>
+                <div className='searchInput'>
+                    <input placeholder='Aramak istediginiz KİŞİ İsmini Giriniz' />
+                    
+                </div>
+             </div>
             <div className='listWrap'>
                 <table>
                     <thead>
@@ -63,17 +69,18 @@ const ListPhones = () => {
                                         <td>{myCategory.name}</td>
                                         <td>
                                             <div className='tableIcon'>
-                                                <Link onClick={() => {
+                                                <Link title='SİL' onClick={() => {
                                                     setShowDeleteModal(true);
                                                     setWillDeletePhone(phone.id)
                                                 }}><i className="fa-solid fa-trash"></i></Link>
-                                                <Link to={`/edit-phone/${phone.id}`}><i className="fa-solid fa-user-pen"></i></Link>
-                                                <Link to={`/info-detail/${phone.id}`}><i className="fa-solid fa-circle-info"></i></Link>
+                                                <Link title='DÜZENLE' to={`/edit-phone/${phone.id}`}><i className="fa-solid fa-user-pen"></i></Link>
+                                                <Link title='AYRINTILAR' to={`/info-detail/${phone.id}`}><i className="fa-solid fa-circle-info"></i></Link>
                                             </div>
                                         </td>
                                     </tr>
-                                 )})}
-                     </tbody>
+                                )
+                            })}
+                    </tbody>
                 </table>
             </div>
             {
@@ -88,9 +95,10 @@ const ListPhones = () => {
                         confirmButtonClick={() => {
                             DeletePhone(willDeletePhone);
                             setShowDeleteModal(false)
-                            }}
+                        }}
                     />
                 )}
         </div>
-    )}
+    )
+}
 export default ListPhones
