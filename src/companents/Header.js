@@ -8,7 +8,7 @@ const Header = () => {
         <div className='headerContainer'>
             <div className='headerRow'>
                 <div className='headerTitle'>
-                      <div>
+                    <div>
                         <i className="fa-solid fa-phone-flip"></i>
                     </div>
                     <div>
@@ -16,12 +16,17 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='headerIcon'>
+                    <div>
+                        <Link title='KATEGORİLER' to={"/list-categories"}>
+                            <i className="fa-solid fa-folder"></i>
+                        </Link>
+                    </div>
                     <di>
-                        <Link title='KATEGORİLER' to={"/add-category"}>
-                        <i class="fa-regular fa-folder-open"></i>
+                        <Link title='KATEGORİ EKLE' to={"/add-category"}>
+                            <i class="fa-regular fa-folder-open"></i>
                         </Link>
                     </di>
-                     <div>
+                    <div>
                         <Link title='KİŞİ EKLE' to={"/add-Phone"}>
                             <i className="fa-solid fa-user-plus"></i>
                         </Link>

@@ -6,7 +6,7 @@ const AddCategory = () => {
         <div>
             <Header />
             <div className='newPhoneTitle'>
-                <div> KATEGORİ EKLE</div>
+                <div> GÜNCELLE</div>
             </div>
             <div className="formWrapper">
                 <form >
@@ -21,7 +21,7 @@ const AddCategory = () => {
                     </div>
                     <div className="submitBtnWrapper">
                         <button className="submitBtn" type="submit">
-                            Kaydet
+                            GÜNCELLE
                         </button>
                     </div>
                 </form>

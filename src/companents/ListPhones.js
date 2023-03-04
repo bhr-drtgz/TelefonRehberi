@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "../assets/styles/ListPhones.css"
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
@@ -9,11 +9,20 @@ import GeneralModal from './../assets/modal/GeneralModal';
 
 
 
+
 const ListPhones = () => {
     const dispatch = useDispatch()
     const { phonesState, categoriesState } = useSelector((state) => state)
     const [showDeleteModal, setShowDeleteModal] = useState(false)
     const [willDeletePhone, setWillDeletePhone] = useState("")
+    const [searchText, setSearchText] = useState("")
+    const [filteredPhones, setFilteredPhones] = useState(phonesState.phones);
+
+    useEffect(() => {
+        console.log(searchText);
+        const temp=phonesState.phones.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()) === true)
+        setFilteredPhones(temp)
+    }, [searchText, phonesState.phones]);
 
     const DeletePhone = (id) => {
         dispatch({ type: actionTypes.phoneActions.DELETE_PHONE_START });
@@ -35,11 +44,18 @@ const ListPhones = () => {
     return (
         <div className='listConteiner'>
             <div className='searchWrap'>
+              <div>
+                <span>ARA :</span>
+              </div>
                 <div className='searchInput'>
-                    <input placeholder='Aramak istediginiz KİŞİ İsmini Giriniz' />
-                    
+                    <input
+                        className=''
+                        type="text"
+                        value={searchText}
+                        onChange={(event) => setSearchText(event.target.value)}
+                        placeholder='Aramak istediginiz KİŞİ İsmini Giriniz' />
                 </div>
-             </div>
+            </div>
             <div className='listWrap'>
                 <table>
                     <thead>
@@ -55,7 +71,7 @@ const ListPhones = () => {
                     </thead>
                     <tbody>
                         {
-                            phonesState.phones.map((phone, index) => {
+                            filteredPhones.map((phone, index) => {
                                 const myCategory = categoriesState.categories.find(
                                     (item) => item.id === phone.categoryId
                                 );

@@ -11,6 +11,8 @@ import AddPhones from "./pages/AddPhones";
 import EditPhone from "./companents/EditPhone";
 import DetailPhone from "./pages/DetailPhone";
 import AddCategory from './pages/AddCategory';
+import ListCategories from "./pages/ListCategories";
+import EditCategory from "./pages/EditCategory"
 
 function App() {
 
@@ -61,6 +63,8 @@ function App() {
         <Route path="/add-phone" element={<AddPhones />} />
         <Route path="/edit-phone/:phoneId" element={<EditPhone />} />
         <Route path="/add-category" element={<AddCategory />} />
+        <Route path="/list-categories" element={<ListCategories />} />
+        <Route path="/edit-category" element={<EditCategory />} />
       </Routes>
     </BrowserRouter>
   );

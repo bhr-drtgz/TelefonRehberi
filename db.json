@@ -47,6 +47,14 @@
       "phoneNumber": "5559992345",
       "email": "123@gmail.com",
       "categoryId": "5"
+    },
+    {
+      "id": "1677954160448",
+      "name": "Miray",
+      "surname": "Dörtgöz",
+      "phoneNumber": "5439087654",
+      "email": "mry@gmail.com",
+      "categoryId": "2"
     }
   ],
   "categories": [

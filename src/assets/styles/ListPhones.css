@@ -15,7 +15,9 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px 3px black
+    box-shadow: 5px 5px 5px 3px black;
+    margin-top: 50px;
+
 }
 
 table {
@@ -49,24 +51,22 @@ table th {
     color: blue;
 }
 
-.searchInput {
+.searchWrap {
     width: 70%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-.serachWrap{
-    width: 70%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    top: 20px;
     display: flex;
-    flex-direction: row;
-    }
+    gap: 20px;
+ }
+ .searchWrap span{
+    font-size: 30px;
+    color: rgb(4, 141, 4);
+ }
 
 .searchInput input {
-    width: 700px;
+    width: 834px;
     height: 30px;
     padding: 25px 25px;
     border: none;
     background-color: rgb(54, 245, 11);
     border-radius: 5px;
- }
+}
