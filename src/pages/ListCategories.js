@@ -9,29 +9,30 @@ import GeneralModal from '../assets/modal/GeneralModal'
 
 const ListCategories = () => {
   const { categoriesState, phonesState } = useSelector(state => state)
+  console.log(categoriesState)
   const dispatch = useDispatch()
-  const [openDeleteModal, setOpenDeleteModal] = useState(false)
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [willDeleteCategory, setWillDeleteCategory] = useState("")
 
-  const deleteCategory = (id) => {
-
-    api.delete(`$(urls.categories)/$(id)`)
+  const DeleteCategory = (id) => {
+    const phones = phonesState.phones.filter((item) => item.categoryId === id)
+    console.log(phones)
+    api
+      .delete(`${urls.categories}/${id}`)
       .then((resCat) => {
         dispatch({
           type: actionTypes.categoryActions.DELETE_CATEGORY,
-          payload: id
+          payload: id,
+        });
+        dispatch({
+          type: actionTypes.phoneActions.DELETE_PHONES_AFTER_DELETE_CATEGORY,
+          payload: id,
         });
       })
-    dispatch({
-      type: actionTypes.phoneActions.DELETE_PHONES_AFTER_DELETE_CATEGORY,
-      payload: id
-    })
+      .catch((err) => { });
+    setShowDeleteModal(false);
+  };
 
-      .catch((err) => {
-        setOpenDeleteModal(false)
-
-      })
-  }
 
   return (
     <div className='listConteiner'>
@@ -50,19 +51,58 @@ const ListCategories = () => {
             </tr>
           </thead>
           <tbody>
-             <tr>
-              <td>1</td>
-              <td>KENDİM</td>
-              <td>
-                <div className='tableIcon'>
-                  <Link title='SİL' onClick={() => { }}><i className="fa-solid fa-trash"></i></Link>
-                  <Link title='DÜZENLE' to={"/edit-category"}><i className="fa-solid fa-user-pen"></i></Link>
-                </div>
-              </td>
-            </tr>
+            {
+              categoriesState.categories.length === 0 && (
+                <tr>
+                  <td colSpan={4}>Kayıtlı kategori yok</td>
+                </tr>
+              )
+            }
+            {
+              categoriesState.categories.length > 0 && (
+                <>
+                  {
+                    categoriesState.categories.map((category, index) => {
+                      const phones = phonesState.phones.filter((item) => item.categoryId === category.id)
+                      return (
+                        <tr key={category.id}>
+                          <td>{index + 1}</td>
+                          <td>{category.name}</td>
+                          <td>{phones.length}</td>
+                          <td>
+                            <div className='tableIcon'>
+                              <Link title='SİL' onClick={() => {
+                                setShowDeleteModal(true);
+                                setWillDeleteCategory(category.id)
+                              }}><i className="fa-solid fa-trash"></i></Link>
+                              <Link title='DÜZENLE' to={`/edit-category/${category.id}`}><i className="fa-solid fa-user-pen"></i></Link>
+                            </div>
+                          </td>
+                        </tr>
+                      )
+                    })
+                  }
+                </>
+              )
+            }
           </tbody>
         </table>
       </div>
+      {
+        showDeleteModal === true && (
+          <GeneralModal
+            title='KATEGORİ SİLME '
+            content='Bütün Kişi Bilgileride Silinecektir. Silmek İstediginize EminMisiz'
+            closeButtonText='VAZGEÇ'
+            confirmButtonText='SİL'
+            hasConfirm={true}
+            closeButtonClick={setShowDeleteModal(false)}
+            confirmButtonClick={() => {
+              DeleteCategory(willDeleteCategory);
+              setShowDeleteModal(false)
+            }}
+          />
+        )}
     </div>
   )
 }

@@ -5,9 +5,7 @@ import { useSelector } from 'react-redux';
 
 const HomePage = () => {
     const {phonesState, categoriesState}=useSelector(state=>state)
-    console.log("phones",phonesState)
-    console.log("categorys",categoriesState)
-    return (
+     return (
         <div>
             <Header />
             <ListPhones />

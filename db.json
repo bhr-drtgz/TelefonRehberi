@@ -41,17 +41,9 @@
       "categoryId": "4"
     },
     {
-      "id": "1677860924257",
-      "name": "Adnan",
-      "surname": "Oktar",
-      "phoneNumber": "5559992345",
-      "email": "123@gmail.com",
-      "categoryId": "5"
-    },
-    {
       "id": "1677954160448",
       "name": "Miray",
-      "surname": "Dörtgöz",
+      "surname": "Dörtgöz TUBA",
       "phoneNumber": "5439087654",
       "email": "mry@gmail.com",
       "categoryId": "2"
@@ -77,6 +69,18 @@
     {
       "id": "5",
       "name": "Asker Arkadaşlarım"
+    },
+    {
+      "id": "1678029257014",
+      "name": "Sınıf Arkadaşlarım"
+    },
+    {
+      "id": "1678036411197",
+      "name": "KANKİLER"
+    },
+    {
+      "id": "1678041005833",
+      "name": "BROLAR BBB"
     }
   ]
 }

@@ -64,7 +64,7 @@ function App() {
         <Route path="/edit-phone/:phoneId" element={<EditPhone />} />
         <Route path="/add-category" element={<AddCategory />} />
         <Route path="/list-categories" element={<ListCategories />} />
-        <Route path="/edit-category" element={<EditCategory />} />
+        <Route path="/edit-category/:categoryId" element={<EditCategory />} />
       </Routes>
     </BrowserRouter>
   );

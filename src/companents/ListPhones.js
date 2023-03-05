@@ -20,7 +20,7 @@ const ListPhones = () => {
 
     useEffect(() => {
         console.log(searchText);
-        const temp=phonesState.phones.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()) === true)
+        const temp = phonesState.phones.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()) === true)
         setFilteredPhones(temp)
     }, [searchText, phonesState.phones]);
 
@@ -44,9 +44,9 @@ const ListPhones = () => {
     return (
         <div className='listConteiner'>
             <div className='searchWrap'>
-              <div>
-                <span>ARA :</span>
-              </div>
+                <div>
+                    <span>ARA :</span>
+                </div>
                 <div className='searchInput'>
                     <input
                         className=''
@@ -105,8 +105,8 @@ const ListPhones = () => {
                         title="SİL"
                         content="Silmek İstediğinize Eminmisiniz?"
                         closeButtonText="Vazgeç"
-                        hasConfirm={true}
                         confirmButtonText="Sil"
+                        hasConfirm={true}
                         closeButtonClick={() => setShowDeleteModal(false)}
                         confirmButtonClick={() => {
                             DeletePhone(willDeletePhone);

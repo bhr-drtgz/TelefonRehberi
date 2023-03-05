@@ -23,7 +23,7 @@ const Header = () => {
                     </div>
                     <di>
                         <Link title='KATEGORİ EKLE' to={"/add-category"}>
-                            <i class="fa-regular fa-folder-open"></i>
+                            <i className="fa-regular fa-folder-open"></i>
                         </Link>
                     </di>
                     <div>
