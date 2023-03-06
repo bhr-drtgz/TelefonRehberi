@@ -8,15 +8,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import GeneralModal from '../assets/modal/GeneralModal'
 
 const ListCategories = () => {
-  const { categoriesState, phonesState } = useSelector(state => state)
-  console.log(categoriesState)
+
+  const { categoriesState, phonesState } = useSelector((state) => state)
   const dispatch = useDispatch()
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [willDeleteCategory, setWillDeleteCategory] = useState("")
 
-  const DeleteCategory = (id) => {
-    const phones = phonesState.phones.filter((item) => item.categoryId === id)
-    console.log(phones)
+  const deleteCategory = (id) => {
     api
       .delete(`${urls.categories}/${id}`)
       .then((resCat) => {
@@ -32,7 +30,6 @@ const ListCategories = () => {
       .catch((err) => { });
     setShowDeleteModal(false);
   };
-
 
   return (
     <div className='listConteiner'>
@@ -71,10 +68,7 @@ const ListCategories = () => {
                           <td>{phones.length}</td>
                           <td>
                             <div className='tableIcon'>
-                              <Link title='SİL' onClick={() => {
-                                setShowDeleteModal(true);
-                                setWillDeleteCategory(category.id)
-                              }}><i className="fa-solid fa-trash"></i></Link>
+                              <Link title='SİL' onClick={() => { setShowDeleteModal(true); deleteCategory(category.id) }}><i className="fa-solid fa-trash"></i></Link>
                               <Link title='DÜZENLE' to={`/edit-category/${category.id}`}><i className="fa-solid fa-user-pen"></i></Link>
                             </div>
                           </td>
@@ -91,18 +85,20 @@ const ListCategories = () => {
       {
         showDeleteModal === true && (
           <GeneralModal
-            title='KATEGORİ SİLME '
-            content='Bütün Kişi Bilgileride Silinecektir. Silmek İstediginize EminMisiz'
-            closeButtonText='VAZGEÇ'
-            confirmButtonText='SİL'
-            hasConfirm={true}
+            title='KATEGORİ SİL'
+            content='Bu Kategorideki Bütün Kişiler Silinecektir. Devam Etmek İstiyormusunuz?'
             closeButtonClick={setShowDeleteModal(false)}
+            hasConfirm={true}
+            closeButtonText=' VAZGEÇ'
+            confirmButtonText='SİL'
             confirmButtonClick={() => {
-              DeleteCategory(willDeleteCategory);
+              deleteCategory(willDeleteCategory);
               setShowDeleteModal(false)
-            }}
+            }
+            }
           />
-        )}
+        )
+      }
     </div>
   )
 }

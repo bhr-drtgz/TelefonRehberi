@@ -74,10 +74,10 @@ const phonesReducer = (state = initialState, action) => {
                 phones: temp,
             };
         case actionTypes.phoneActions.DELETE_PHONES_AFTER_DELETE_CATEGORY:
-            var tempt = state.phones.filter(item => item.categoryId !== action.payload)
+            var temp = state.phones.filter(item => item.categoryId !== action.payload)
              return {
                 ...state,
-                phones:tempt,
+                phones:temp,
             }
 
         default:

@@ -43,7 +43,7 @@ const EditCategory = () => {
         <div>
             <Header />
             <div className='newPhoneTitle'>
-                <div> GÜNCELLE</div>
+                <div>KATEGORİYİ GÜNCELLE</div>
             </div>
             <div className="formWrapper">
                 <form onSubmit={handleSubmit} >

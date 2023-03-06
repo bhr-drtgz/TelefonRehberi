@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Bahri",
       "surname": "Dörtgöz",
-      "email": "123@gmail",
+      "email": "123@gmail.com",
       "phoneNumber": "5556667788",
       "categoryId": "1"
     },
@@ -12,7 +12,7 @@
       "id": "2",
       "name": "Ahmet",
       "surname": "Kara",
-      "email": "123@abc@gmail",
+      "email": "abc@gmail.com",
       "phoneNumber": "5556667788",
       "categoryId": "2"
     },
@@ -20,17 +20,9 @@
       "id": "3",
       "name": "Tunç",
       "surname": "Yılmaz",
-      "email": "123@abc@gmail",
+      "email": "123@gmail.com",
       "phoneNumber": "5556667788",
       "categoryId": "3"
-    },
-    {
-      "id": "5",
-      "name": "Fatih",
-      "surname": "Solak",
-      "email": "123abc@gmail",
-      "phoneNumber": "5556667788",
-      "categoryId": "5"
     },
     {
       "id": "1677779802065",
@@ -52,7 +44,7 @@
   "categories": [
     {
       "id": "1",
-      "name": "Kendi Numaram"
+      "name": "Kendi Numaram DENEME"
     },
     {
       "id": "2",
@@ -69,18 +61,6 @@
     {
       "id": "5",
       "name": "Asker Arkadaşlarım"
-    },
-    {
-      "id": "1678029257014",
-      "name": "Sınıf Arkadaşlarım"
-    },
-    {
-      "id": "1678036411197",
-      "name": "KANKİLER"
-    },
-    {
-      "id": "1678041005833",
-      "name": "BROLAR BBB"
     }
   ]
 }

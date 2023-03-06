@@ -35,7 +35,7 @@ const EditPhone = () => {
             <Header />
 
             <div className='newPhoneTitle'>
-                <div> GÜNCELLE</div>
+                <div>KİŞİYİ GÜNCELLE</div>
             </div>
             <div className="formWrapper">
                 <form onSubmit={handleSubmit}>
