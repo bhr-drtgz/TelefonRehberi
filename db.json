@@ -35,7 +35,7 @@
     {
       "id": "1677954160448",
       "name": "Miray",
-      "surname": "Dörtgöz TUBA",
+      "surname": "Dörtgöz",
       "phoneNumber": "5439087654",
       "email": "mry@gmail.com",
       "categoryId": "2"
@@ -44,23 +44,23 @@
   "categories": [
     {
       "id": "1",
-      "name": "Kendi Numaram DENEME"
+      "name": "KENDİ NUMARAM "
     },
     {
       "id": "2",
-      "name": "Ailem"
+      "name": "AİLEM "
     },
     {
       "id": "3",
-      "name": "Okul Arkadaşlarım"
+      "name": "OKUL ARKADAŞLARIM "
     },
     {
       "id": "4",
-      "name": "İş Arkadaşlarım"
+      "name": "İŞ ARKADAŞLARIM "
     },
     {
       "id": "5",
-      "name": "Asker Arkadaşlarım"
+      "name": "ASKER ARKADAŞLARIM "
     }
   ]
 }
